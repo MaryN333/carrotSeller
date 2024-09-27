@@ -43,9 +43,9 @@ public class Contract {
     @Override
     public String toString() {
         return "Contract{" +
-                "contractNumber='" + contractNumber + '\'' +
-                ", signingDate=" + signingDate +
-                ", weightInTons=" + weightInTons +
+                "contract number='" + contractNumber + '\'' +
+                ", signing date=" + signingDate +
+                ", weight in tons=" + weightInTons +
                 '}';
     }
 }
