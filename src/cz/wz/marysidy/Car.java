@@ -62,7 +62,7 @@ public class Car {
             return  false;
         }
         // Check for invalid characters
-        if(spz.matches(".*[GQOW].*") || spz.matches(".*[№!%:,\\[\\].{};()<>'\"`].*")){
+        if(spz.toUpperCase().matches(".*[GQOW].*") || spz.matches(".*[№!%:,\\[\\].{};()<>'\"`].*")){
             System.out.println("Invalid character / symbol in the registration number.");
             return false;
         }

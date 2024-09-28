@@ -39,7 +39,7 @@ public class Main {
 
 //        try {
             // car3, impossible to create an object
-            Car car3 = new Car("Tesla", "light grey", "3WJ7413", 11.3);
+            Car car3 = new Car("Tesla", "light grey", "3wJ7413", 11.3);
             cars.add(car3);
 //        }  catch (IllegalArgumentException e)  {
 //            System.out.println("Caution: The car was not added." + e.getMessage());
