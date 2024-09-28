@@ -7,9 +7,12 @@ public class Car {
     private double consumptionPer100km;
 
     public Car(String model, String color, String spz, double consumptionPer100km) {
+//        if(!isValidSpz(spz)){
+//            throw new IllegalArgumentException("Invalid registration number: " + spz);
+//        }
         this.model = model;
         this.color = color;
-        this.spz = spz;
+        setSpz(spz);
         this.consumptionPer100km = consumptionPer100km;
     }
 
@@ -34,7 +37,13 @@ public class Car {
     }
 
     public void setSpz(String spz) {
-        this.spz = spz;
+        if(isValidSpz(spz)){
+            this.spz = spz;
+        } //else{
+////            System.out.println("The car was not added due to an invalid registration number.");
+////            System.out.println("/*-".repeat(20));
+//            throw new IllegalArgumentException("The car was not added due to an invalid registration number.");
+//        }
     }
 
     public double getConsumptionPer100km() {
@@ -43,6 +52,22 @@ public class Car {
 
     public void setConsumptionPer100km(double consumptionPer100km) {
         this.consumptionPer100km = consumptionPer100km;
+    }
+
+    // Methods
+    private boolean isValidSpz(String spz){
+        // length control
+        if(spz.length()<5 || spz.length()>7){
+            System.out.println("Invalid length of registration number.");
+            return  false;
+        }
+        // Check for invalid characters
+        if(spz.matches(".*[GQOW].*") || spz.matches(".*[№!%:,\\[\\].{};()<>'\"`].*")){
+            System.out.println("Invalid character / symbol in the registration number.");
+            return false;
+        }
+        return true;
+
     }
 
     @Override
