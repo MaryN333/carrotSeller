@@ -61,13 +61,12 @@ public class Car {
             System.out.println("Invalid length of registration number.");
             return  false;
         }
-        // Check for invalid characters
-        if(spz.toUpperCase().matches(".*[GQOW].*") || spz.matches(".*[№!%:,\\[\\].{};()<>'\"`].*")){
+        // Check for invalid characters (all numbers and letters of the English enphabet, except G, O, Q, W)
+        if(!spz.toUpperCase().matches("[A-FH-NPR-VX-Z0-9]+")){
             System.out.println("Invalid character / symbol in the registration number.");
             return false;
         }
         return true;
-
     }
 
     @Override

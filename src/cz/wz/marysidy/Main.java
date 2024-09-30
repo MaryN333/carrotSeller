@@ -24,7 +24,7 @@ public class Main {
         contracts.add(contract2);
 
 //        try{
-            Car car1 = new Car("Škoda", "wet asphalt", "1J4563", 9.2);
+            Car car1 = new Car("Škoda", "wet asphalt", "1hkJ4563", 9.2);
             cars.add(car1);
 //        } catch (IllegalArgumentException e) {
 //            System.out.println("Caution: The car was not added." + e.getMessage());
@@ -39,7 +39,7 @@ public class Main {
 
 //        try {
             // car3, impossible to create an object
-            Car car3 = new Car("Tesla", "light grey", "3wJ7413", 11.3);
+            Car car3 = new Car("Tesla", "light grey", "3Jq7413", 11.3);
             cars.add(car3);
 //        }  catch (IllegalArgumentException e)  {
 //            System.out.println("Caution: The car was not added." + e.getMessage());
